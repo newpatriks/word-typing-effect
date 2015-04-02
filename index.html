@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Letter By Letter plugin</title>
+<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100,200,300' rel='stylesheet' type='text/css'>
+<style type=text/css>
+	body{
+		width:100%;
+		font-family: 'Advent Pro', sans-serif;
+		color:#000;
+		font-size:12px;
+	}
+	h1{
+		font-size:6em;
+		color: #000;
+		margin: 10px 10px 210px 10px;
+		padding: 0px;
+		font-weight: 100;
+	}
+</style>
+	<!--[if IE]>
+		<script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+	<![endif]-->
+</head>
+<body>
+	<h1 id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+</body>
+<script type="text/javascript" src="assets/js/letterByLetter.js"></script>
+<script type=text/javascript>
+	var lbl = new LetterByLetter("message", 3);
+</script>
+</html>
