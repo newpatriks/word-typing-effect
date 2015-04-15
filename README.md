@@ -3,7 +3,7 @@ Javascript plugin that simulates a real time typing text. This plugin/function i
 
 ###How to use
 
-It's a very easy-to-use function. You just need to pass through the **id** where is the text, and the **speed** you want to load the text.
+It's a very easy-to-use function. You just need to pass the **id** where the text is, and the **speed* *you want to load the text at.
 
 ```html
 <h1 id="message">This is a simple text example</h1>
