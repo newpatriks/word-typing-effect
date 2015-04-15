@@ -1,4 +1,4 @@
-var LetterByLetter = function(element, speed)
+var WordTyping = function(element, speed)
 {
 	var container = document.getElementById(element);
 	var mainText = container.innerHTML;
