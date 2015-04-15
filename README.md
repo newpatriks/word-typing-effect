@@ -1,4 +1,4 @@
-# Letter by letter
+# Word typing effect
 Javascript plugin that simulates a real time typing text. This plugin/function is a wip, so will be updated soon.
 
 ###How to use
@@ -11,7 +11,7 @@ It's a very easy-to-use function. You just need to pass through the **id** where
 ...
 
 <script type="text/javascript">
-	var lbl = new LetterByLetter("message", 3);
+	var wt = new WordTyping("message", 3);
 </script>
 ```
 
