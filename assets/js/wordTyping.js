@@ -1,22 +1,25 @@
-var WordTyping = function(element, speed)
+var WordTyping = function(element, speed, callback)
 {
+// B.I
+// added support for callbacks to trigger consecutive animations without the hassle of keeping track of setTimeouts.
+	callback = callback || null;
 	var container = document.getElementById(element);
 	var mainText = container.innerHTML;
 	var res = mainText.split(" ");
 	var i = 0;
 	var defaultSpeed = 200;
-	
-	container.innerHTML = "";
-	runAllWords();
 
-	function runAllWords()
+	container.innerHTML = "";
+	runAllWords(c);
+
+	function runAllWords(c)
 	{
 		if (i < res.length)
 		{
 			var a = (i==0) ? i : i-1;
 			setTimeout(function(){ showWord(res[i],0) }, res[a].length * defaultSpeed * 1/speed);
 		}else{
-			complete();
+			complete(c);
 		}
 	}
 
@@ -40,12 +43,17 @@ var WordTyping = function(element, speed)
 		showWord(word,counterWord+1);
 	}
 
-	function complete()
+	function complete(c)
 	{
-		return true;
+		try{
+			c();
+			return true;
+		}catch(e){
+				console.error(e);
+		}
 	}
 
-	return 
+	return
 	{
 		complete;
 	}

@@ -25,9 +25,20 @@
 </head>
 <body>
 	<h1 id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+
+	<h2 id="1">Launched first</h2>
+	<h2 id="2">Launched second</h2>
 </body>
 <script type="text/javascript" src="assets/js/wordTyping.js"></script>
 <script type=text/javascript>
 	var wt = new WordTyping("message", 3);
+
+	// Added support for callbacks to enable chaining events
+	var chain = new WordTyping("1", 5, function(){
+		console.log('1 is done.');
+		var anchor = new WordTyping('2', 2, function(){
+			console.log('2 is done.');
+		});
+	});
 </script>
 </html>
