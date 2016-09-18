@@ -5,7 +5,7 @@ var WordTyping = function(element, speed)
 	var res = mainText.split(" ");
 	var i = 0;
 	var defaultSpeed = 200;
-	
+
 	container.innerHTML = "";
 	runAllWords();
 
@@ -13,7 +13,7 @@ var WordTyping = function(element, speed)
 	{
 		if (i < res.length)
 		{
-			var a = (i==0) ? i : i-1;
+			var a = (i === 0) ? i : i-1;
 			setTimeout(function(){ showWord(res[i],0) }, res[a].length * defaultSpeed * 1/speed);
 		}else{
 			complete();
@@ -24,7 +24,7 @@ var WordTyping = function(element, speed)
 	{
 		if (counterWord < word.length)
 		{
-			setTimeout(function(){ showLetter(word,counterWord) }, defaultSpeed * 1/speed);
+			setTimeout(function(){ showLetter(word,counterWord); }, defaultSpeed * 1/speed);
 		}
 		else
 		{
@@ -45,8 +45,7 @@ var WordTyping = function(element, speed)
 		return true;
 	}
 
-	return 
-	{
-		complete;
-	}
-}
+	return {
+		complete: complete
+	};
+};
